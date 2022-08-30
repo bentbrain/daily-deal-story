@@ -61,7 +61,7 @@ html {
 .productTitle {
   font-family: "BNG L";
   font-size: 0.9em;
-  max-width: min(55%, 30ch);
+  max-width: min(55%, 40ch);
   margin-bottom: 0.3em;
 }
 
@@ -123,4 +123,5 @@ html {
   font-size: 1.3rem;
   line-height: 1;
   color: grey;
+  padding: 0 2rem;
 }

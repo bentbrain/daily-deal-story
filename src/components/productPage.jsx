@@ -21,42 +21,11 @@ export const ProductPage = ({ heroImg, brandImg, productTitle, salePriceDollars,
 
 
 
-  const getTimezone = (simpleDate) => {
-    const tempDate = new Date(simpleDate);
-    const daylightSavings = tempDate
-      .toString()
-      .match(/\(.+?\)/g)[0]
-      .replace(/[^A-Z]/g, "");
-
-    return daylightSavings;
-  };
-
-  const formatTheDate = (simpleDate) => {
-    const monthNames = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-    const tempDate = new Date(simpleDate);
-    const dateString = `${tempDate.getDate()} ${monthNames[tempDate.getMonth()]
-      } ${tempDate.getFullYear()}`;
-    return dateString;
-  };
 
   const heroX = heroDimensions.split(',')[0]
   const heroY = heroDimensions.split(',')[1]
   const heroScale = heroDimensions.split(',')[2]
-  const endDate = formatTheDate(simpleDate)
-  const timeZone = getTimezone(simpleDate)
+
 
   return <AbsoluteFill
     style={{
@@ -80,7 +49,7 @@ export const ProductPage = ({ heroImg, brandImg, productTitle, salePriceDollars,
         </div>
       </div>
     </div>
-    <p className='disclaimer'>Hurry, offer ends 11:59PM ({timeZone}) {endDate} unless extended. All other offers are while stocks last. Prices, availability and shipping are correct at the time of send and are subject to change. </p>
+    <p className='disclaimer'>Hurry, offer ends 11:59PM {simpleDate} unless extended. All other offers are while stocks last. Prices, availability and shipping are correct at the time of send and are subject to change. </p>
     <Sequence from={10} >
       <PdpLogo />
     </Sequence>
