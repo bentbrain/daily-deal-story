@@ -45,7 +45,7 @@ on:
 jobs:
   render:
     name: Render video
-    runs-on: macos-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@main
       - uses: actions/setup-node@main
