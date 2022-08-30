@@ -20,7 +20,7 @@ export const RemotionVideo = () => {
 				defaultProps={{
 					brandImg: "https://assets.kogan.com/files/brand-logos/fortis-rev2.png?auto=webp&height=50&quality=90",
 					firstImg: "https://gorgeous-selkie-5dd26b.netlify.app/assets/free-shipping-exclusive-prices.png",
-					heroDimensions: "196.921875, -36.828125, 1",
+					heroDimensions: "196.921875, -43.828125, 1",
 					heroImg: "https://assets.kogan.com/files/product/2021/FS700CALTHA/FS700CALTHA_Feed.jpg?auto=webp&canvas=1080%2C1920&fit=bounds&height=1920&quality=75&width=1080",
 					papCents: "",
 					papDollars: "499",

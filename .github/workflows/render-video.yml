@@ -35,7 +35,7 @@ on:
         required: false
         description: "test"
       heroDimensions:
-        default: "82.921875 -29.828125 1.03125"
+        default: "196.921875, -43.828125, 1"
         required: true
         description: "test"
       simpleDate:
@@ -49,8 +49,7 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - uses: actions/setup-node@main
-      - run: sudo apt update
-      - run: sudo apt install ffmpeg
+      - run: FedericoCarboni/setup-ffmpeg@v1
       - run: npm i
       - run: echo $WORKFLOW_INPUT > input-props.json
         env:
