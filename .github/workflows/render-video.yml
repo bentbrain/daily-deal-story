@@ -3,43 +3,43 @@ on:
   workflow_dispatch:
     inputs:
       brandImg: 
-        default: 'https://assets.kogan.com/files/brand-logos/ergolux-brand-logo.png',
+        default: 'https://assets.kogan.com/files/brand-logos/ergolux-brand-logo.png'
         required: true
         description: 'test'
       heroImg: 
-        default: 'https://assets.kogan.com/files/product/2021/FS700CALTHA/FS700CALTHA_3.jpg?auto=webp&canvas=1080%2C1920&fit=bounds&height=1920&quality=75&width=1080',
+        default: 'https://assets.kogan.com/files/product/2021/FS700CALTHA/FS700CALTHA_3.jpg?auto=webp&canvas=1080%2C1920&fit=bounds&height=1920&quality=75&width=1080'
         required: true
         description: 'test'
       firstImg: 
-        default: 'https://gorgeous-selkie-5dd26b.netlify.app/assets/exclusive-prices.png',
+        default: 'https://gorgeous-selkie-5dd26b.netlify.app/assets/exclusive-prices.png'
         required: true
         description: 'test'
       productTitle: 
-        default: "Adidas Womens Big Logo Fleece Hoodie",
+        default: "Adidas Womens Big Logo Fleece Hoodie"
         required: true
         description: 'test'
       salePriceDollars: 
-        default: '399',
+        default: '399'
         required: true
         description: 'test'
       salePriceCents: 
-        default: '',
+        default: ''
         required: false
         description: 'test'
       papDollars: 
-        default: '499',
+        default: '499'
         required: true
         description: 'test'
       papCents: 
-        default: '',
+        default: ''
         required: false
         description: 'test'
       heroDimensions: 
-        default: '82.921875, -29.828125, 1.03125',
+        default: '82.921875 -29.828125 1.03125'
         required: true
         description: 'test'
       simpleDate: 
-        default: '2022-08-31,
+        default: '2022-08-31
         required: true
         description: 'test'
 jobs:
