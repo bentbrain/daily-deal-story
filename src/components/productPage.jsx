@@ -17,7 +17,47 @@ export const PdpLogo = () => {
   );
 };
 
-export const ProductPage = ({ heroImg, brandImg, productTitle, salePriceDollars, salePriceCents, papDollars, papCents, endDate, timeZone, firstImg, heroX, heroY, heroScale }) => {
+export const ProductPage = ({ heroImg, brandImg, productTitle, salePriceDollars, salePriceCents, papDollars, papCents, simpleDate, firstImg, heroDimensions }) => {
+
+
+
+  const getTimezone = (simpleDate) => {
+    const tempDate = new Date(simpleDate);
+    const daylightSavings = tempDate
+      .toString()
+      .match(/\(.+?\)/g)[0]
+      .replace(/[^A-Z]/g, "");
+
+    return daylightSavings;
+  };
+
+  const formatTheDate = (simpleDate) => {
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    const tempDate = new Date(simpleDate);
+    const dateString = `${tempDate.getDate()} ${monthNames[tempDate.getMonth()]
+      } ${tempDate.getFullYear()}`;
+    return dateString;
+  };
+
+  const heroX = heroDimensions.split(',')[0]
+  const heroY = heroDimensions.split(',')[1]
+  const heroScale = heroDimensions.split(',')[2]
+  const endDate = formatTheDate(simpleDate)
+  const timeZone = getTimezone(simpleDate)
+
   return <AbsoluteFill
     style={{
       background: 'white',

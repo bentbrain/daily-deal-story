@@ -34,24 +34,12 @@ on:
         default: '',
         required: false
         description: 'test'
-      heroX: 
-        default: '50',
+      heroDimensions: 
+        default: '82.921875, -29.828125, 1.03125',
         required: true
         description: 'test'
-      heroY: 
-        default: '-100',
-        required: true
-        description: 'test'
-      heroScale: 
-        default: '1',
-        required: true
-        description: 'scale'
-      endDate: 
-        default: '29 August 2022',
-        required: true
-        description: 'test'
-      timeZone: 
-        default: 'AEST'
+      simpleDate: 
+        default: '2022-08-31,
         required: true
         description: 'test'
 jobs:
