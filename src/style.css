@@ -1,0 +1,126 @@
+:root {
+  --kogan-red: #ed193a;
+  --kogan-grey: #4d4d4d;
+  --kogan-light-grey: rgb(247, 247, 247);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: Boing-Semibold;
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Semibold.woff2);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Semibold.woff);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Semibold.ttf);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Semibold.svg);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Semibold.eot);
+}
+@font-face {
+  font-family: Boing-Regular;
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Regular.woff2);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Regular.woff);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Regular.ttf);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Regular.svg);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Regular.eot);
+}
+@font-face {
+  font-family: Boing-Light;
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Light.woff2);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Light.woff);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Light.ttf);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Light.svg);
+  src: url(https://www.kogan.com/media/files/KOGAN-FLATPAGES/kogan-first/boing/subset-Boing-Light.eot);
+}
+@font-face {
+  font-family: "BNG S";
+  src: url("https://static.kogan.com/static/fonts/boing/subset-Boing-Semibold.woff2") format("woff2"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Semibold.woff") format("wofff"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Semibold.ttf") format("truetype"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Semibold.svg") format("svg"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Semibold.eot") format("eot");
+}
+@font-face {
+  font-family: "BNG R";
+  src: url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.woff2") format("woff2"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.woff") format("wofff"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.ttf") format("truetype"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.svg") format("svg"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.eot") format("eot");
+}
+@font-face {
+  font-family: "BNG L";
+  src: url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.woff2") format("woff2"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.woff") format("wofff"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.ttf") format("truetype"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.svg") format("svg"), url("https://static.kogan.com/static/fonts/boing/subset-Boing-Light.eot") format("eot");
+}
+.product-info * {
+  margin: unset;
+}
+
+.product-info {
+  position: absolute;
+  bottom: 10rem;
+  font-family: "BNG S";
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  color: var(--kogan-grey);
+}
+
+.productTitle {
+  font-family: "BNG L";
+  font-size: 0.9em;
+  max-width: min(55%, 30ch);
+  margin-bottom: 0.3em;
+}
+
+.redblock {
+  background-color: var(--kogan-red);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.3rem;
+  padding-right: 1rem;
+  border-radius: 0 18px 18px 0;
+  color: white;
+  line-height: 1;
+  margin: 0;
+}
+
+.cents {
+  font-size: 0.7em;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.salePrice {
+  font-size: 12rem;
+}
+.salePrice .cents {
+  font-size: 0.3em;
+  transform: translateY(2rem);
+}
+
+.papPrice {
+  font-size: 1.5em;
+}
+
+.bottomText {
+  font-family: "BNG L";
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  gap: 1rem;
+}
+
+.product-info > * {
+  padding-left: 3rem;
+}
+
+.firstImg {
+  padding-left: unset;
+  width: 30rem;
+  margin: 0;
+}
+
+.disclaimer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-family: "BNG L";
+  font-size: 1.3rem;
+  line-height: 1;
+  color: grey;
+}
