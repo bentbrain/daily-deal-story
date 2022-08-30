@@ -49,7 +49,7 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - uses: actions/setup-node@main
-      - run: FedericoCarboni/setup-ffmpeg@v1
+      - uses: FedericoCarboni/setup-ffmpeg@v1
       - run: npm i
       - run: echo $WORKFLOW_INPUT > input-props.json
         env:
