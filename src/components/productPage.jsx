@@ -17,7 +17,7 @@ export const PdpLogo = () => {
   );
 };
 
-export const ProductPage = ({ heroImg, brandImg, productTitle, salePriceDollars, salePriceCents, papDollars, papCents, endDate, timeZone, firstImg, heroX, heroY }) => {
+export const ProductPage = ({ heroImg, brandImg, productTitle, salePriceDollars, salePriceCents, papDollars, papCents, endDate, timeZone, firstImg, heroX, heroY, heroScale }) => {
   return <AbsoluteFill
     style={{
       background: 'white',
@@ -27,15 +27,15 @@ export const ProductPage = ({ heroImg, brandImg, productTitle, salePriceDollars,
 
     <div style={{ isolation: 'isolate' }} className="product">
       <Img style={{ position: 'absolute', top: '8rem', right: '2rem', width: '20rem', height: '20rem', objectFit: 'contain', objectPosition: 'center right' }} className='brand-logo' src={brandImg} />
-      <Img style={{ position: 'absolute', inset: '0', objectFit: 'contain', objectPosition: 'center right', zIndex: -1, transform: `translateX(${heroX}px) translateY(${heroY}px)` }} className='brand-logo' src={heroImg} />
+      <Img style={{ position: 'absolute', inset: '0', objectFit: 'contain', objectPosition: 'center right', zIndex: -1, transform: `translateX(${heroX / 640 * 100}%) translateY(${heroY / 640 * 100}%) scale(${heroScale})` }} className='brand-logo' src={heroImg} />
       <div className="product-info">
         <p className="productTitle">{productTitle}</p>
         <Img className='firstImg' src={firstImg} />
         <div className="redblock">
-          <p class='salePrice'>${salePriceDollars}<span className='cents' >.{salePriceCents}</span></p>
+          <p class='salePrice'>${salePriceDollars}<span className='cents' >{salePriceCents}</span></p>
           <div className="bottomText">
             <p>PRICE AFTER<br />PROMOTION</p>
-            <p className='papPrice' >${papDollars}<span className='cents' >.{papCents}</span></p>
+            <p className='papPrice' >${papDollars}<span className='cents' >{papCents}</span></p>
           </div>
         </div>
       </div>

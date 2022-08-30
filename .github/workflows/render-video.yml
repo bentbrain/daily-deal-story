@@ -2,10 +2,58 @@ name: Render video
 on:
   workflow_dispatch:
     inputs:
-      productTitle:
-        description: "Which text should it say?"
+      brandImg: 
+        default: 'https://assets.kogan.com/files/brand-logos/ergolux-brand-logo.png',
         required: true
-        default: "Product Title"
+        description: 'test'
+      heroImg: 
+        default: 'https://assets.kogan.com/files/product/2021/FS700CALTHA/FS700CALTHA_3.jpg?auto=webp&canvas=1080%2C1920&fit=bounds&height=1920&quality=75&width=1080',
+        required: true
+        description: 'test'
+      firstImg: 
+        default: 'https://gorgeous-selkie-5dd26b.netlify.app/assets/exclusive-prices.png',
+        required: true
+        description: 'test'
+      productTitle: 
+        default: "Adidas Womens Big Logo Fleece Hoodie",
+        required: true
+        description: 'test'
+      salePriceDollars: 
+        default: '399',
+        required: true
+        description: 'test'
+      salePriceCents: 
+        default: '',
+        required: false
+        description: 'test'
+      papDollars: 
+        default: '499',
+        required: true
+        description: 'test'
+      papCents: 
+        default: '',
+        required: false
+        description: 'test'
+      heroX: 
+        default: '50',
+        required: true
+        description: 'test'
+      heroY: 
+        default: '-100',
+        required: true
+        description: 'test'
+      heroScale: 
+        default: '1',
+        required: true
+        description: 'scale'
+      endDate: 
+        default: '29 August 2022',
+        required: true
+        description: 'test'
+      timeZone: 
+        default: 'AEST'
+        required: true
+        description: 'test'
 jobs:
   render:
     name: Render video
@@ -24,3 +72,6 @@ jobs:
         with:
           name: video.mp4
           path: out/video.mp4
+
+
+

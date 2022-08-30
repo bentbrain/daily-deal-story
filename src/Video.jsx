@@ -18,18 +18,19 @@ export const RemotionVideo = () => {
 				// You can override these props for each render:
 				// https://www.remotion.dev/docs/parametrized-rendering
 				defaultProps={{
-					brandImg: 'https://assets.kogan.com/files/brand-logos/ergolux-brand-logo.png',
-					heroImg: 'https://assets.kogan.com/files/product/2021/FS700CALTHA/FS700CALTHA_3.jpg?auto=webp&canvas=1080%2C1920&fit=bounds&height=1920&quality=75&width=1080',
-					firstImg: 'https://gorgeous-selkie-5dd26b.netlify.app/assets/exclusive-prices.png',
-					productTitle: "Adidas Womens Big Logo Fleece Hoodie",
-					salePriceDollars: '399',
-					salePriceCents: '99',
-					papDollars: '499',
-					papCents: '99',
-					heroX: '50',
-					heroY: '-100',
-					endDate: '29 August 2022',
-					timeZone: 'AEST'
+					brandImg: "https://assets.kogan.com/files/brand-logos/fortis-rev2.png?auto=webp&height=50&quality=90",
+					endDate: "3 August 2022",
+					firstImg: "https://gorgeous-selkie-5dd26b.netlify.app/assets/free-shipping-exclusive-prices.png",
+					heroImg: "https://assets.kogan.com/files/product/2021/FS700CALTHA/FS700CALTHA_Feed.jpg?auto=webp&canvas=1080%2C1920&fit=bounds&height=1920&quality=75&width=1080",
+					heroX: 193.921875,
+					heroY: -31.828125,
+					heroScale: 1,
+					papCents: ".99",
+					papDollars: "499",
+					productTitle: "Frotis Mountain Bike thing",
+					salePriceCents: ".99",
+					salePriceDollars: "399",
+					timeZone: "AEST"
 				}}
 			/>
 		</>
