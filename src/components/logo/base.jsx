@@ -1,12 +1,12 @@
-import {Base} from './introBase';
-import {Daily} from './daily';
-import {Deal} from './deal';
-import {ShootingStar} from './shootingstar';
-import {useCurrentFrame, useVideoConfig, spring, Sequence} from 'remotion';
+import { Base } from './introBase';
+import { Daily } from './daily';
+import { Deal } from './deal';
+import { ShootingStar } from './shootingStar';
+import { useCurrentFrame, useVideoConfig, spring, Sequence } from 'remotion';
 
 export const FullBase = () => {
 	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
+	const { fps } = useVideoConfig();
 
 	const hoursRotate = spring({
 		frame,
