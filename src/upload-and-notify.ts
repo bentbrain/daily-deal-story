@@ -20,7 +20,6 @@ xns(async () => {
 					Body: fs.readFileSync(
 						'/Users/runner/work/daily-deal-story/daily-deal-story/out/video.mp4'
 					),
-					ACL: 'public-read',
 				},
 				(err, data) => {
 					if (err) {
