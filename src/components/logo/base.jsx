@@ -2,7 +2,8 @@ import { Base } from './introBase';
 import { Daily } from './daily';
 import { Deal } from './deal';
 import { ShootingStar } from './shootingStar';
-import { useCurrentFrame, useVideoConfig, spring, Sequence } from 'remotion';
+import { useCurrentFrame, useVideoConfig, spring, Sequence, Audio } from 'remotion';
+import pop from '../../audio/pop.wav'
 
 export const FullBase = () => {
 	const frame = useCurrentFrame();
@@ -68,6 +69,12 @@ export const FullBase = () => {
 				<Sequence from={10} layout="none">
 					<Deal />
 				</Sequence>
+				<Audio
+					src={pop}
+					startFrom={0} // if composition is 30fps, then it will start at 2s
+					endAt={30}
+					volume={0.4} // if composition is 30fps, then it will end at 4s
+				/>
 			</div>
 		</>
 	);

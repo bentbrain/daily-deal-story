@@ -1,8 +1,8 @@
-import {Hours} from './logo/24hrs';
-import {Stars} from './logo/stars';
-import {Clock} from './logo/clock';
-import {FullBase} from './logo/base';
-import {ClockContainer} from './logo/clockContainer';
+import { Hours } from './logo/24hrs';
+import { Stars } from './logo/stars';
+import { Clock } from './logo/clock';
+import { FullBase } from './logo/base';
+import { ClockContainer } from './logo/clockContainer';
 import {
 	AbsoluteFill,
 	Loop,
@@ -12,9 +12,9 @@ import {
 	Sequence,
 } from 'remotion';
 
-export const FullLogo = ({positionY, introScale, intro}) => {
+export const FullLogo = ({ positionY, introScale, intro }) => {
 	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
+	const { fps } = useVideoConfig();
 
 	const hoursRotate = spring({
 		frame,
@@ -76,6 +76,7 @@ export const FullLogo = ({positionY, introScale, intro}) => {
 			<Sequence from={20} layout="none">
 				<ClockContainer />
 			</Sequence>
+
 		</AbsoluteFill>
 	);
 };

@@ -53,5 +53,6 @@ export const ProductPage = ({ heroImg, brandImg, productTitle, salePriceDollars,
     <Sequence from={10} >
       <PdpLogo />
     </Sequence>
+
   </AbsoluteFill>;
 };

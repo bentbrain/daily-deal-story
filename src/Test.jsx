@@ -8,11 +8,14 @@ import {
     interpolate,
     Easing,
     Img,
-    staticFile
+    staticFile,
+    Audio
 } from 'remotion';
 import { FullLogo } from './components/fullLogo';
 import { ProductPage } from './components/productPage';
 import './style.css'
+import stomps from './audio/stomps-trim.mp3'
+import whoosh from './audio/whooshes/2.wav'
 
 export const Test = (props = { heroImg, brandImg, productTitle, salePriceDollars, salePriceCents, papDollars, papCents, endDate, timeZone, firstImg }) => {
     const frame = useCurrentFrame();
@@ -48,7 +51,6 @@ export const Test = (props = { heroImg, brandImg, productTitle, salePriceDollars
                 justifyContent: 'center',
             }}
         >
-
             <Sequence from={235}>
                 <AbsoluteFill style={{
                     perspective: '800px'
@@ -62,17 +64,20 @@ export const Test = (props = { heroImg, brandImg, productTitle, salePriceDollars
                         transform: `rotateX(${foldUp}deg)`,
                     }} src={staticFile('assets/logo-stacked.png')} />
                 </AbsoluteFill>
+
+
             </Sequence>
 
-            <Sequence from={65}>
+            <Sequence from={65} durationInFrames={176}>
                 <AbsoluteFill style={{
                     transform: `translateY(${pdpSwipe}%)`
                 }}>
                     <ProductPage {...props} />
                 </AbsoluteFill>
+
             </Sequence>
 
-            <Sequence from={0} to={80}>
+            <Sequence from={0} durationInFrames={80}>
                 <div
                     style={{
                         opacity: fadeOpacity,
@@ -85,7 +90,17 @@ export const Test = (props = { heroImg, brandImg, productTitle, salePriceDollars
                 </div>
             </Sequence>
 
-
+            <Audio
+                src={stomps}
+                startFrom={0} // if composition is 30fps, then it will start at 2s
+                endAt={300}
+                volume={0.5} // if composition is 30fps, then it will end at 4s
+            />
+            <Sequence from={230}>
+                <Audio
+                    src={whoosh}
+                />
+            </Sequence>
         </AbsoluteFill>
     );
 };

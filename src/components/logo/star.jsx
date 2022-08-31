@@ -1,6 +1,6 @@
-import {useCurrentFrame, interpolate} from 'remotion';
+import { useCurrentFrame, interpolate } from 'remotion';
 
-export const Star = ({color, style, reverse, svgStyle}) => {
+export const Star = ({ color, style, reverse, svgStyle }) => {
 	const frame = useCurrentFrame();
 
 	const rotate = interpolate(frame, [0, 90], [0, 1], {

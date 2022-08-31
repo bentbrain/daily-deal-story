@@ -1,15 +1,17 @@
-import {Star} from './star';
+import { Star } from './star';
+import stars from '../../audio/stars.wav'
 import {
 	useCurrentFrame,
 	useVideoConfig,
 	spring,
 	interpolate,
 	Easing,
+	Audio
 } from 'remotion';
 
-export const ShootingStar = ({color, reverse, rotate, scale}) => {
+export const ShootingStar = ({ color, reverse, rotate, scale }) => {
 	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
+	const { fps } = useVideoConfig();
 
 	const hoursRotate = spring({
 		frame,
@@ -56,6 +58,12 @@ export const ShootingStar = ({color, reverse, rotate, scale}) => {
 				}}
 				color={color}
 				reverse={reverse}
+			/>
+			<Audio
+				src={stars}
+				startFrom={0} // if composition is 30fps, then it will start at 2s
+				endAt={300}
+				volume={0.1} // if composition is 30fps, then it will end at 4s
 			/>
 		</div>
 	);

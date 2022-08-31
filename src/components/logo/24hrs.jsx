@@ -4,10 +4,12 @@ import {
 	spring,
 	useCurrentFrame,
 	useVideoConfig,
+	Audio
 } from 'remotion';
+import pop from '../../audio/pop.wav'
 export const Hours = (style) => {
 	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
+	const { fps } = useVideoConfig();
 
 	const hoursRotate = spring({
 		frame,
@@ -43,6 +45,12 @@ export const Hours = (style) => {
 				}}
 			>
 				<Img style={style.style} src={staticFile('assets/24HRs.png')} />
+				<Audio
+					src={pop}
+					startFrom={5} // if composition is 30fps, then it will start at 2s
+					endAt={30}
+					volume={0.3} // if composition is 30fps, then it will end at 4s
+				/>
 			</div>
 		</>
 	);
