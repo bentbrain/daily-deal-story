@@ -11,13 +11,13 @@ xns(async () => {
 		accessKeyId: process.env.S3_ACCESS_KEY,
 		secretAccessKey: process.env.S3_SECRET_KEY,
 	});
-	const result = await new Promise < AWS.S3.ManagedUpload.SendData > (
+	const result = await new Promise<AWS.S3.ManagedUpload.SendData>(
 		(resolve, reject) => {
 			s3.upload(
 				{
 					Bucket: 'kogan-prod-assets/files/daily-deal-videos',
 					Key: `daily-deal-${Date.now()}.mp4`,
-					Body: fs.readFileSync(path.join(__dirname, '..', 'out/video.mp4')),
+					Body: fs.readFileSync(path.join(__dirname, '..', 'out.mp4')),
 					ACL: 'public-read',
 				},
 				(err, data) => {
