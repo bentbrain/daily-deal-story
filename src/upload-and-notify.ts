@@ -17,7 +17,9 @@ xns(async () => {
 				{
 					Bucket: 'kogan-prod-assets/files/daily-deal-videos',
 					Key: `daily-deal-${Date.now()}.mp4`,
-					Body: fs.readFileSync(path.join(__dirname, '..', 'out.mp4')),
+					Body: fs.readFileSync(
+						'/Users/runner/work/daily-deal-story/daily-deal-story/out/video.mp4'
+					),
 					ACL: 'public-read',
 				},
 				(err, data) => {
