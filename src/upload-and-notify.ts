@@ -2,7 +2,6 @@ import AWS from 'aws-sdk';
 import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
-import Slackbot from 'slackbot';
 import xns from 'xns';
 
 dotenv.config();

@@ -59,15 +59,12 @@ export const FullLogo = ({ positionY, introScale, intro }) => {
 				transform: `translateY(${positionY}rem) translateX(-2rem) scale(${introScale})`,
 			}}
 		>
-			<Sequence from={35} layout="none">
-				<Stars />
-				<Stars inverted={true} />
-			</Sequence>
+
 
 			<Sequence from={30} layout="none">
 				<Hours
 					style={{
-						filter: 'drop-shadow(0px 15px 0px  black)',
+
 						maxWidth: '100%',
 					}}
 				/>

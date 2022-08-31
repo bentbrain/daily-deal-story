@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       brandImg:
-        default: "https://assets.kogan.com/files/brand-logos/ergolux-brand-logo.png"
+        default: ""
         required: true
         description: "test"
       heroImg:
@@ -11,27 +11,27 @@ on:
         required: true
         description: "test"
       firstImg:
-        default: "https://gorgeous-selkie-5dd26b.netlify.app/assets/exclusive-prices.png"
+        default: ""
         required: true
         description: "test"
       productTitle:
-        default: "Adidas Womens Big Logo Fleece Hoodie"
+        default: "Product title"
         required: true
         description: "test"
       salePriceDollars:
-        default: "399"
+        default: "00"
         required: true
         description: "test"
       salePriceCents:
-        default: ""
+        default: "00"
         required: false
         description: "test"
       papDollars:
-        default: "499"
+        default: "00"
         required: true
         description: "test"
       papCents:
-        default: ""
+        default: "00"
         required: false
         description: "test"
       heroDimensions:

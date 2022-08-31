@@ -39,7 +39,9 @@ export const ProductPage = ({ heroImg, brandImg, productTitle, salePriceDollars,
       <Img style={{ position: 'absolute', inset: '0', objectFit: 'contain', objectPosition: 'center right', zIndex: -1, transform: `translateX(${heroX / 640 * 100}%) translateY(${heroY / 640 * 100}%) scale(${heroScale})` }} className='brand-logo' src={heroImg} />
       <div className="product-info">
         <p className="productTitle">{productTitle}</p>
-        <Img className='firstImg' src={firstImg} />
+        {firstImg != "" && (
+          <Img className='firstImg' src={firstImg} />
+        )}
         <div className="redblock">
           <p class='salePrice'>${salePriceDollars}<span className='cents' >{salePriceCents}</span></p>
           <div className="bottomText">

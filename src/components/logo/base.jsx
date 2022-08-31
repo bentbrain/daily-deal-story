@@ -32,24 +32,7 @@ export const FullBase = () => {
 
 	return (
 		<>
-			<Sequence layout="none" from={2}>
-				<ShootingStar color="#ed193a" rotate={-35} scale={0.9} reverse={true} />
-			</Sequence>
-			<Sequence layout="none" from={4}>
-				<ShootingStar color="#3a3a3c" rotate={-20} scale={0.7} />
-			</Sequence>
-			<Sequence layout="none" from={6}>
-				<ShootingStar color="#ed193a" rotate={0} scale={0.9} reverse={true} />
-			</Sequence>
-			<Sequence layout="none" from={2}>
-				<ShootingStar color="#3a3a3c" rotate={180} scale={0.7} reverse={true} />
-			</Sequence>
-			<Sequence layout="none" from={4}>
-				<ShootingStar color="#ed193a" rotate={160} scale={0.9} />
-			</Sequence>
-			<Sequence layout="none" from={6}>
-				<ShootingStar color="#3a3a3c" rotate={140} scale={0.8} reverse={true} />
-			</Sequence>
+
 			<div
 				style={{
 					position: 'absolute',

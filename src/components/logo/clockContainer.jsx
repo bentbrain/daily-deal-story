@@ -1,6 +1,6 @@
 import { Clock } from './clock';
 
-import { Loop, useCurrentFrame, useVideoConfig, spring, Audio } from 'remotion';
+import { Loop, useCurrentFrame, useVideoConfig, spring, Audio, Sequence } from 'remotion';
 import pop from '../../audio/pop.wav'
 
 export const ClockContainer = () => {
@@ -28,12 +28,14 @@ export const ClockContainer = () => {
 			<Loop durationInFrames={30} layout="none">
 				<Clock />
 			</Loop>
-			<Audio
-				src={pop}
-				startFrom={0} // if composition is 30fps, then it will start at 2s
-				endAt={30}
-				volume={0.3} // if composition is 30fps, then it will end at 4s
-			/>
+			<Sequence from={3}>
+				<Audio
+					src={pop}
+					startFrom={5} // if composition is 30fps, then it will start at 2s
+					endAt={30}
+					volume={0.3} // if composition is 30fps, then it will end at 4s
+				/>
+			</Sequence>
 		</div>
 	);
 };
