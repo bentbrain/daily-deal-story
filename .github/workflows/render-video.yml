@@ -61,5 +61,5 @@ jobs:
           S3_SECRET_KEY: ${{ secrets.S3_SECRET_KEY }}
       - uses: actions/upload-artifact@v2
         with:
-          name: out.mp4
-          path: out.mp4
+          name: video.mp4
+          path: out/video.mp4
