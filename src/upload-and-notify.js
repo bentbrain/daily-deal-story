@@ -11,7 +11,7 @@ xns(async () => {
 		accessKeyId: process.env.S3_ACCESS_KEY,
 		secretAccessKey: process.env.S3_SECRET_KEY,
 	});
-	const result = await new Promise(
+	const result = await new Promise < AWS.S3.ManagedUpload.SendData > (
 		(resolve, reject) => {
 			s3.upload(
 				{
