@@ -51,7 +51,7 @@ export const ProductPage = ({ heroImg, brandImg, productTitle, salePriceDollars,
         </div>
       </div>
     </div>
-    <p className='disclaimer'>Hurry, offer ends 11:59PM {simpleDate} unless extended. All other offers are while stocks last. Prices, availability and shipping are correct at the time of send and are subject to change. </p>
+    <p className='disclaimer'>Hurry, offer ends 7:59AM {simpleDate} unless extended. All other offers are while stocks last. Prices, availability and shipping are correct at the time of send and are subject to change. </p>
     <Sequence from={10} >
       <PdpLogo />
     </Sequence>
